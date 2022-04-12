@@ -37,12 +37,12 @@ async def save_group(bot, message):
             await bot.leave_chat(message.chat.id)
             return
         buttons = [[
-            InlineKeyboardButton('ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
-            InlineKeyboardButton('ᴜᴘᴅᴀᴛᴇs', url='https://t.me/dk_botx')
+            InlineKeyboardButton('ℹ️ ʜᴇʟᴘ', url=f"https://t.me/{temp.U_NAME}?start=help"),
+            InlineKeyboardButton('📢 ᴜᴘᴅᴀᴛᴇs', url='https://t.me/+LqHpKVf0p9ZiNDI1')
         ]]
         reply_markup=InlineKeyboardMarkup(buttons)
         await message.reply_text(
-            text=f"<b>ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ❣️\n\n ᴍᴀᴋᴇ ᴍᴇ ᴀᴅᴍɪɴ ᴀɴᴅ ᴇɴᴊᴏʏ.</b>",
+            text=f"<b>ᴛʜᴀɴᴋs ғᴏʀ ᴀᴅᴅɪɴɢ ᴍᴇ ɪɴ {message.chat.title} ❣️</b>",
             reply_markup=reply_markup)
     else:
         settings = await get_settings(message.chat.id)
@@ -53,7 +53,7 @@ async def save_group(bot, message):
                         await (temp.MELCOW['welcome']).delete()
                     except:
                         pass
-                temp.MELCOW['welcome'] = await message.reply(f"<b>ʜᴇʏ, {u.mention}, ᴡᴇʟᴄᴏᴍᴇ {message.chat.title} ғʀɪᴇɴᴅɪɴᴇ ᴏᴋᴋᴇ ɢʀᴏᴜᴘɪʟ ᴀᴅᴅ ᴀᴀᴋᴋɪ ᴘᴇᴡᴇʀ ᴀᴋᴋᴇɴɴᴇ 💖</b>")
+                temp.MELCOW['welcome'] = await message.reply(f"<b>𝖧𝖾𝗒, {u.mention} 🙌</b>")
 
 
 @Client.on_message(filters.command('leave') & filters.user(ADMINS))
