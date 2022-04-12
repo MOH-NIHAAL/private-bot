@@ -41,7 +41,7 @@ async def give_filter(client, message):
 async def next_page(bot, query):
     ident, req, key, offset = query.data.split("_")
     if int(req) not in [query.from_user.id, 0]:
-        return await query.answer("𝖣𝗈𝗇'𝗍 𝖳𝖺𝗄𝖾 𝖵𝖾𝗅𝗅𝖺𝖼𝗁𝗂𝗅 𝖣𝗎𝖽𝖾. 𝖲𝖾𝖺𝗋𝖼𝗁 𝖸𝗈𝗎𝗋𝗌𝖾𝗅𝖿 , 𝖾𝗇𝗂𝗍 𝖺𝗍𝗁𝗂𝗅 𝗉𝖺𝗇𝗂𝗒𝖺𝖽𝖺", show_alert=True)
+        return await query.answer("𝖳𝗁𝗂𝗌 𝖥𝗂𝗅𝗍𝖾𝗋 𝖨𝗌 𝗇𝗈𝗍 𝖥𝗈𝗋 𝖸𝗈𝗎 𝖣𝗎𝖽𝖾 🙄", show_alert=True)
     try:
         offset = int(offset)
     except:
