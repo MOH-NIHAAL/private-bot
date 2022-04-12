@@ -120,7 +120,7 @@ async def next_page(bot, query):
 async def advantage_spoll_choker(bot, query):
     _, user, movie_ = query.data.split('#')
     if int(user) != 0 and query.from_user.id != int(user):
-        return await query.answer("𝖵𝖾𝗅𝗅𝖺𝖼𝗁𝗂𝗅 𝖠𝗇𝗈𝖽𝖾𝗒.. 𝖨𝗏𝗂𝖽𝖾 𝗏𝖾𝗇𝖽𝖺", show_alert=True)
+        return await query.answer("𝖲𝖾𝖺𝗋𝖼𝗁 𝖸𝗈𝗎𝗋𝗌𝖾𝗅𝖿 , 𝖣𝗈 𝖠𝗇𝗒𝗍𝗁𝗂𝗇𝗀 𝗂𝗇 𝗂𝗍 😌", show_alert=True)
     if movie_ == "close_spellcheck":
         return await query.message.delete()
     movies = SPELL_CHECK.get(query.message.reply_to_message.message_id)
@@ -364,7 +364,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
                     caption=f_caption,
                     protect_content=True if ident == "filep" else False 
                 )
-                await query.answer('𝗖𝗛𝗘𝗖𝗞 𝗣𝗠 , 𝗜 𝗛𝗔𝗩𝗘 𝗦𝗘𝗡𝗧 𝗙𝗜𝗟𝗘𝗦 𝗢𝗡 𝗬𝗢𝗨𝗥 𝗣𝗠', show_alert=True)
+                await query.answer('𝖧𝖾𝗒 𝖨 𝗁𝖺𝗏𝖾 𝗌𝖾𝗇𝗍 𝗒𝗈𝗎 𝖥𝗂𝗅𝖾𝗌 𝗉𝖾𝗋𝗌𝗈𝗇𝖺𝗅𝗒. 𝖢𝗁𝖾𝖼𝗄 𝗆𝗒 𝖯𝖬 .', show_alert=True)
         except UserIsBlocked:
             await query.answer('Unblock the bot mahn !', show_alert=True)
         except PeerIdInvalid:
@@ -606,7 +606,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
             ]
             reply_markup = InlineKeyboardMarkup(buttons)
             await query.message.edit_reply_markup(reply_markup)
-    await query.answer('Podah Sherikkum')
+    await query.answer('ʟᴏᴀᴅɪɴɢ......')
 
 
 async def auto_filter(client, msg, spoll=False):
